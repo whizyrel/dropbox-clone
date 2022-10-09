@@ -1,67 +1,132 @@
-<main class="d-flex flex-column w-100">
-    <mat-toolbar class="d-flex p-0 bg-white shadow-sm">
-        <a [routerLink]="['/']" class="d-flex h-100 p-0">
-            <span class="d-flex h-100 p-3 my-auto bg-primary">
-                <svg class="my-auto" width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
+<mat-toolbar class="d-flex p-0 bg-white shadow-sm">
+    <a [routerLink]="['/']" class="d-flex h-100 p-0">
+        <span class="d-flex h-100 p-3 my-auto bg-primary">
+            <svg class="my-auto" width="30" height="25" viewBox="0 0 30 25" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
                     d="M7.70076 0.320312L0.478516 4.91332L7.70076 9.50633L14.9242 4.91332L22.1465 9.50633L29.3687 4.91332L22.1465 0.320312L14.9242 4.91332L7.70076 0.320312Z"
                     fill="#F7F5F2"></path>
-                    <path d="M7.70076 18.6925L0.478516 14.0994L7.70076 9.50633L14.9242 14.0994L7.70076 18.6925Z" fill="#F7F5F2"></path>
-                    <path d="M14.9242 14.0994L22.1465 9.50633L29.3687 14.0994L22.1465 18.6925L14.9242 14.0994Z" fill="#F7F5F2"></path>
-                    <path d="M14.9242 24.8164L7.70077 20.2234L14.9242 15.6304L22.1465 20.2234L14.9242 24.8164Z" fill="#F7F5F2"></path>
-                </svg>
-            </span>
-            <span class="ms-3 my-auto mat-headline fw-bold text-dark">Dropbox</span>
+                <path d="M7.70076 18.6925L0.478516 14.0994L7.70076 9.50633L14.9242 14.0994L7.70076 18.6925Z"
+                    fill="#F7F5F2"></path>
+                <path d="M14.9242 14.0994L22.1465 9.50633L29.3687 14.0994L22.1465 18.6925L14.9242 14.0994Z"
+                    fill="#F7F5F2"></path>
+                <path d="M14.9242 24.8164L7.70077 20.2234L14.9242 15.6304L22.1465 20.2234L14.9242 24.8164Z"
+                    fill="#F7F5F2"></path>
+            </svg>
+        </span>
+        <span class="ms-3 my-auto mat-headline fw-bold text-dark">Dropbox</span>
+    </a>
+
+    <div class="d-none d-xl-flex h-100 mx-2">
+        <a mat-button class="d-flex m-0 px-3 mat-h2 rounded-0">
+            <span class="my-auto">Why Dropbox?</span>
         </a>
 
+        <a mat-button class="d-flex d-flex m-0 px-3 py-2 mat-h2 rounded-0">
+            <span>Products</span>
+        </a>
+
+        <a mat-button class="d-flex d-flex m-0 px-3 py-2 mat-h2 rounded-0">
+            <span>Solutions</span>
+        </a>
+
+        <a mat-button class="d-flex d-flex m-0 px-3 py-2 mat-h2 rounded-0">
+            <span>Pricing</span>
+        </a>
+    </div>
+
+    <div class="d-flex h-100 ms-auto my-auto">
         <div class="d-none d-xl-flex h-100 mx-2">
-            <a mat-button class="d-flex m-0 px-3 mat-h2 rounded-0">
-                <span class="my-auto">Why Dropbox?</span>
+            <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0">
+                <span class="m-auto">Contact</span>
             </a>
-        
-            <a mat-button class="d-flex d-flex m-0 px-3 py-2 mat-h2 rounded-0">
-                <span>Products</span>
-            </a>
-        
-            <a mat-button class="d-flex d-flex m-0 px-3 py-2 mat-h2 rounded-0">
-                <span>Solutions</span>
-            </a>
-        
-            <a mat-button class="d-flex d-flex m-0 px-3 py-2 mat-h2 rounded-0">
-                <span>Pricing</span>
+
+            <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0">
+                <span class="m-auto">Get App</span>
             </a>
         </div>
 
-        <div class="d-flex h-100 ms-auto my-auto">
-            <div class="d-none d-xl-flex h-100 mx-2">
-                <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0">
-                    <span class="m-auto">Contact</span>
-                </a>
+        <div class="d-flex h-100">
+            <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0" [routerLink]="['/', 'register']">
+                <span class="m-auto">Sign up</span>
+            </a>
+            <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0" [routerLink]="['/', 'login']">
+                <span class="m-auto">Sign in</span>
+            </a>
+        </div>
 
-                <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0">
-                    <span class="m-auto">Get App</span>
-                </a>
-            </div>
-
-            <div class="d-flex h-100">
-                <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0" [routerLink]="['/', 'register']">
-                    <span class="m-auto">Sign up</span>
-                </a>
-                <a mat-button class="d-flex m-0 px-3 py-2 mat-h2 rounded-0" [routerLink]="['/', 'login']">
-                    <span class="m-auto">Sign in</span>
-                </a>
-            </div>
-
-            <div class="d-flex py-2">
-                <button mat-flat-button class="d-none d-md-flex rounded-0" color="accent">
-                    <span class="me-3 mat-h3 fw-bold">Get Started</span>
-                    <mat-icon class="ms-3">arrow_forward</mat-icon>
-                </button>
-            </div>
-
-            <button mat-icon-button class="mx-2 my-auto">
-                <mat-icon>menu</mat-icon>
+        <div class="d-flex py-2">
+            <button mat-flat-button class="d-none d-md-flex rounded-0" color="accent">
+                <span class="me-3 mat-h3 fw-bold">Get Started</span>
+                <mat-icon class="ms-3">arrow_forward</mat-icon>
             </button>
         </div>
-    </mat-toolbar>
+
+        <button mat-icon-button class="mx-2 my-auto">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<main class="d-flex flex-column w-100 text-white" style="background-color: #1e1919;">
+    <div class="d-flex flex-column w-100 my-5">
+        <div class="d-flex flex-column mxw-90 mxw-sm-60 py-2 align-self-center">
+            <h1 class="mx-auto mb-2 mat-display-3 fw-bold text-center" style="line-height: 120%;">
+                Join over 700 million registered users who trust Dropbox
+            </h1>
+            <span class="mat-headline text-center">Easy to use, reliable, private, and secure. It’s no wonder Dropbox is the choice for storing and sharing your most
+            important files.</span>
+        </div>
+
+        <button mat-flat-button class="mx-auto mt-3 px-4 py-3 rounded-0 mat-h1 text-dark" color="accent" style="width: fit-content">
+            <span class="me-2 fw-bold">Find your plan?</span>
+            <mat-icon class="ms-3">arrow_forward</mat-icon>
+        </button>
+
+        <div class="d-flex mxw-50 mx-auto my-5">
+            <img class="mx-auto"
+                alt="A collection of images of a family and their dogs that is being savevd in a Dropbox folder" loading="lazy"
+                src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/2560w/80q/img.jpg"
+                srcset="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/414w/80q/img.jpg 414w, https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/828w/80q/img.jpg 828w, https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/1024w/80q/img.jpg 1024w, https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/1280w/80q/img.jpg 1280w, https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/1600w/80q/img.jpg 1600w, https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/1920w/80q/img.jpg 1920w, https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/v2-hp-asset-medium-2560x1840.jpg.transform/2560w/80q/img.jpg 2560w" style="object-fit: cover; object-position: center; width: 100%;">
+        </div>
+
+        <div class="d-flex flex-column container my-5">
+            <h1 class="mx-auto mat-display-2">See what sets Dropbox apart</h1>
+
+            <div class="d-flex flex-wrap w-100">
+                <div class="d-flex flex-column col-12 col-sm-6 col-md-3 px-3">
+                    <img class="d-flex mb-4"
+                        alt="emoji, emoticon, smiley, positive" loading="lazy"
+                        src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/emoji smile.svg" style="width: fit-content; height: 48px; object-fit: scale-down; vertical-align: start;">
+                    <span class="mat-headline">Your files, not ours</span>
+                    <p class="mat-h2">With Dropbox, your files belong to you, not us, so you can be sure we’re not reselling your data.</p>
+                </div>
+
+                <div class="d-flex flex-column col-12 col-sm-6 col-md-3 px-3">
+                    <img class="d-flex mb-4" alt="emoji, emoticon, smiley, positive" loading="lazy"
+                        src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/cloud done.svg"
+                        style="width: fit-content; height: 48px; object-fit: scale-down; vertical-align: start;">
+                    <span class="mat-headline">All your files in one place</span>
+                    <p class="mat-h2">Store computer backups, photo libraries, thousands of documents—all your files, in the same place
+                    </p>
+                </div>
+
+                <div class="d-flex flex-column col-12 col-sm-6 col-md-3 px-3">
+                    <img class="d-flex mb-4" alt="emoji, emoticon, smiley, positive" loading="lazy"
+                        src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/twinkle.svg"
+                        style="width: fit-content; height: 48px; object-fit: scale-down; vertical-align: start;">
+                    <span class="mat-headline">One-of-a-kind functionality</span>
+                    <p class="mat-h2">Store files as large as 2 TB each, sync at light speed, and allow anyone to preview nearly 200 file types.</p>
+                </div>
+
+                <div class="d-flex flex-column col-12 col-sm-6 col-md-3 px-3">
+                    <img class="d-flex mb-4" alt="emoji, emoticon, smiley, positive" loading="lazy"
+                        src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/shield.svg"
+                        style="width: fit-content; height: 48px; object-fit: scale-down; vertical-align: start;">
+                    <span class="mat-headline">Ease of use and security</span>
+                    <p class="mat-h2">2/3 of surveyed users say Dropbox keeps their files more secure and we’re a leader in ease of use.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
