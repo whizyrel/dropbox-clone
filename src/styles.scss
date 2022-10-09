@@ -123,7 +123,7 @@ $light-warn: mat.define-palette((
 
 $typography: mat.define-typography-config(
   $font-family: "Darker Grotesque",
-//   $font-family: "Familjen Grotesk",
+  $button: mat.define-typography-level(18px, 18px, 500),
 );
 
 @include mat.core($typography);
@@ -171,6 +171,14 @@ $danger: map-get($light-theme, "warn", 700);
     color: auto !important;
     text-decoration: none !important;
   }
+}
+
+@mixin align-mat-button-content($margin: auto)  {
+    ::ng-deep {
+        span.mat-button-wrapper {
+            margin: #{$margin};
+        }
+    }
 }
 
 body {
