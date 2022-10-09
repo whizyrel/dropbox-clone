@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+main {
+    mat-toolbar {
+        height: 48px;
+    }
+    
+    div {
+        button[mat-flat-button].mat-flat-button {
+            @include align-mat-button-content(auto);
+        }
+
+        a[mat-button].mat-button {
+            @include align-mat-button-content(auto);
+        }
+    }
+}
