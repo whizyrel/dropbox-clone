@@ -1,0 +1,194 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+/* For use in src/lib/core/theming/_palette.scss */
+$light-primary: mat.define-palette((
+    50 : #e4e3e3,
+    100 : #bcbaba,
+    200 : #8f8c8c,
+    300 : #625e5e,
+    400 : #403c3c,
+    500 : #1e1919,
+    600 : #1a1616,
+    700 : #161212,
+    800 : #120e0e,
+    900 : #0a0808,
+    A100 : #ff5151,
+    A200 : #ff1e1e,
+    A400 : #ea0000,
+    A700 : #d00000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
+
+$light-accent: mat.define-palette((
+    50 : #e0ecff,
+    100 : #b3d0ff,
+    200 : #80b0ff,
+    300 : #4d90fe,
+    400 : #2679fe,
+    500 : #0061fe,
+    600 : #0059fe,
+    700 : #004ffe,
+    800 : #0045fe,
+    900 : #0033fd,
+    A100 : #ffffff,
+    A200 : #f1f3ff,
+    A400 : #bec7ff,
+    A700 : #a4b1ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+));
+
+$light-warn: mat.define-palette((
+    50 : #f3e0e6,
+    100 : #e1b3c2,
+    200 : #cd8099,
+    300 : #b94d70,
+    400 : #aa2651,
+    500 : #9b0032,
+    600 : #93002d,
+    700 : #890026,
+    800 : #7f001f,
+    900 : #6d0013,
+    A100 : #ff9ca6,
+    A200 : #ff6978,
+    A400 : #ff364a,
+    A700 : #ff1d33,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+), A700);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $dropbox-clone-primary: mat.define-palette(mat.$indigo-palette);
+// $dropbox-clone-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// primary #1e1919
+// secondary #0061fe
+// accent #9b0032
+
+
+// The warn palette is optional (defaults to red).
+// $dropbox-clone-warn: mat.define-palette(mat.$red-palette);
+
+$typography: mat.define-typography-config(
+  $font-family: "Darker Grotesque",
+//   $font-family: "Familjen Grotesk",
+);
+
+@include mat.core($typography);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
+  ),
+    typography: $typography,
+));
+
+@import "bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+// @import url('https://fonts.googleapis.com/css2?Familjen+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($light-theme);
+
+$primary: map-get($light-theme, "primary", "default");
+$dark: map-get($light-theme, "primary", "darker");
+$light: map-get($light-theme, "primary", "lighter");
+$secondary: map-get($light-theme, "accent", "default");
+$warning: map-get($light-theme, "warn", "default");
+$danger: map-get($light-theme, "warn", 700);
+
+/* You can add global styles to this file, and also import other style files */
+
+@mixin no-outline {
+  outline: none !important;
+  outline-style: none !important;
+}
+
+@mixin normalize-anchor {
+  text-decoration: none !important;
+  color: inherit !important;
+
+  &:hover {
+    color: auto !important;
+    text-decoration: none !important;
+  }
+}
+
+body {
+  width: 100vw;
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+
+  a {
+    @include normalize-anchor();
+  }
+
+  input,
+  textarea {
+    @include no-outline();
+  }
+
+  textarea {
+    resize: none !important;
+  }
+}
+
