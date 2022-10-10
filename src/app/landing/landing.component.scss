@@ -13,3 +13,23 @@ mat-toolbar {
         }
     }
 }
+
+main {
+    div {
+        .benefit-item {
+            &:hover {
+                background-color: #f7f5f2;
+            }
+
+            &.selected:hover {
+                background-color: unset;
+            }
+        }
+
+        .user-usage-card {
+            button[mat-flat-button].mat-flat-button {
+                @include align-mat-button-content(auto);
+            }
+        }
+    }
+}
