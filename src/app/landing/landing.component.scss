@@ -31,5 +31,19 @@ main {
                 @include align-mat-button-content(auto);
             }
         }
+
+        .explore-section {
+            button[mat-flat-button].mat-flat-button {
+                @include align-mat-button-content(auto);
+            }
+        }
+
+        .testimonials {
+            height: 372px;
+
+            @include media-breakpoint-up(xl) {
+                height: 472px;
+            }
+        }
     }
 }
