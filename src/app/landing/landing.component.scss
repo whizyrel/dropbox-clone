@@ -1,8 +1,6 @@
 @import '../../styles.scss';
 
-mat-toolbar {
-    height: 48px!important;
-
+app-toolbar {
     div {
         button[mat-flat-button].mat-flat-button {
             @include align-mat-button-content(auto);

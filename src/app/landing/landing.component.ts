@@ -195,7 +195,7 @@ export class LandingComponent implements OnInit {
     this.selectedTestimonial = 0;
   }
 
-  public selectPreviousTestimonial() {
+  public selectPreviousTestimonial(section: HTMLDivElement) {
     if (this.selectedTestimonial === 0) {
       this.selectedTestimonial = this.testimonials.length - 1;
 
@@ -203,9 +203,10 @@ export class LandingComponent implements OnInit {
     }
 
     this.selectedTestimonial--;
+    section.scrollIntoView({block: 'center', inline: 'center'});
   }
 
-  public selectNextTestimonial() {
+  public selectNextTestimonial(section: HTMLDivElement) {
     if (this.selectedTestimonial > this.testimonials.length - 1) {
       this.selectedTestimonial = 0;
 
@@ -213,5 +214,6 @@ export class LandingComponent implements OnInit {
     }
 
     this.selectedTestimonial++;
+    section.scrollIntoView({block: 'center', inline: 'center'});
   }
 }

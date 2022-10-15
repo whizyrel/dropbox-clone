@@ -1,0 +1,7 @@
+@import '../../styles.scss';
+
+div {
+    button[mat-stroked-button].mat-stroked-button, button[mat-flat-button].mat-flat-button {
+        @include align-mat-button-content(auto);
+    }
+}
