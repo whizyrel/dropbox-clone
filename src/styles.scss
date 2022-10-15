@@ -159,12 +159,15 @@ $utilities: (
     values: (
       100: 100%,
       90: 90%,
+      85: 85%,
       80: 80%,
       70: 70%,
       75: 75%,
       65: 65%,
       60: 60%,
+      55: 55%,
       50: 50%,
+      45: 45%,
       40: 40%,
       35: 35%,
     ),
@@ -224,11 +227,11 @@ $danger: map-get($light-theme, "warn", 700);
 
 @mixin align-mat-button-content($margin: auto, $display: flex)  {
     ::ng-deep {
-        span.mat-button-wrapper {
-            width: 100%;
-            margin: #{$margin};
-            display: $display;
-        }
+      span.mat-button-wrapper {
+        width: 100%;
+        margin: #{$margin};
+        display: $display;
+      }
     }
 }
 
